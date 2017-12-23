@@ -1,0 +1,4 @@
+These classes come from:
+http://www.codeproject.com/KB/cs/Streaming_wave_audio.aspx
+
+But I added the classes that I needed.

@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2B58D7F4-ED68-4D34-A830-65B4704F1862}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SecureChat.Client</RootNamespace>
+    <AssemblyName>SecureChat.Client</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge.Video, Version=2.0.0.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.0.0.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActiveWebCams.cs" />
+    <Compile Include="Client.cs" />
+    <Compile Include="FakeWebCamEnumerator.cs" />
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSelectWebCams.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSelectWebCams.Designer.cs">
+      <DependentUpon>FormSelectWebCams.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTransferFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTransferFile.Designer.cs">
+      <DependentUpon>FormTransferFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormWebCam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormWebCam.Designer.cs">
+      <DependentUpon>FormWebCam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Icons.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Icons.resx</DependentUpon>
+    </Compile>
+    <Compile Include="LumiSoft.Media.Wave\native\MMSYSERR.cs" />
+    <Compile Include="LumiSoft.Media.Wave\native\WavConstants.cs" />
+    <Compile Include="LumiSoft.Media.Wave\native\WAVEFORMATEX.cs" />
+    <Compile Include="LumiSoft.Media.Wave\native\WAVEHDR.cs" />
+    <Compile Include="LumiSoft.Media.Wave\native\WAVEOUTCAPS.cs" />
+    <Compile Include="LumiSoft.Media.Wave\native\WavFormat.cs" />
+    <Compile Include="LumiSoft.Media.Wave\native\WavMethods.cs" />
+    <Compile Include="LumiSoft.Media.Wave\WaveIn.cs" />
+    <Compile Include="LumiSoft.Media.Wave\WaveOut.cs" />
+    <Compile Include="LumiSoft.Media.Wave\WavInDevice.cs" />
+    <Compile Include="LumiSoft.Media.Wave\WavOutDevice.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSelectWebCams.resx">
+      <DependentUpon>FormSelectWebCams.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTransferFile.resx">
+      <DependentUpon>FormTransferFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormWebCam.resx">
+      <DependentUpon>FormWebCam.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Icons.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SoundEnumerator.cs" />
+    <Compile Include="WebCamEnumerator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Pfz.InterfaceWrapping\Pfz.InterfaceWrapping.csproj">
+      <Project>{C3F8A4B5-87D6-4E83-A2AE-4011E570E966}</Project>
+      <Name>Pfz.InterfaceWrapping</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pfz.Remoting\Pfz.Remoting.csproj">
+      <Project>{5602296A-7575-4E45-B57F-CEF0B5BF67E3}</Project>
+      <Name>Pfz.Remoting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pfz\Pfz.csproj">
+      <Project>{6400C4CD-6C04-4A37-9544-0924907630A4}</Project>
+      <Name>Pfz</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SecureChat.Common\SecureChat.Common.csproj">
+      <Project>{E7390D3F-0140-43D5-927A-A0CFD5D2D115}</Project>
+      <Name>SecureChat.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EARTH.ICO" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Animation01.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Animation02.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Animation03.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Animation04.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Animation05.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Animation06.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Animation07.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Animation08.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Animation09.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Animation10.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Animation11.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LumiSoft.Media.Wave\Origin.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
